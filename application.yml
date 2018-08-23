@@ -13,9 +13,14 @@ management:
       exposure:
         include: "*"
 
-# REST CONTROLLERS
-# Pretty-print JSON for non-HATEOS response objects
 spring:
+  datasource:
+    url: jdbc:mysql://mysql-database:3306/oowg?useSSL=false&allowPublicKeyRetrieval=true
+    username: dbuser
+    password: dbp4ss
+    platform: mysql
+  # REST CONTROLLERS
+  # Pretty-print JSON for non-HATEOS response objects
   jackson:
     serialization:
       indent-output: true
